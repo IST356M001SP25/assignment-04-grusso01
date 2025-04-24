@@ -1,7 +1,7 @@
 # Reflection
 
-Student Name:  name
-Sudent Email:  email
+Student Name:  Gabrielle Russo
+Sudent Email:  grusso01@syr.edu
 
 ## Instructions
 
@@ -23,3 +23,4 @@ Examples:
 
 `--- Reflection Below This Line ---`
 
+I learned how to use pandas and Streamlit together to create a simple data browser that lets users upload files, select columns, and filter data. I now understand how multiselect, toggle, and selectbox work in Streamlit and how to filter a dataframe based on user input. I struggled a bit with understanding which columns were considered “object” type in pandas and how that affects filtering. I need more practice working with dtypes and dynamic filtering for other types like numbers and dates. Next, I’d like to try adding numeric or date filters to get more comfortable with other column types.
