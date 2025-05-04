@@ -1,22 +1,12 @@
-'''
-A Library of useful pandas helper functions
-SOLUTION FILE!!!!
-'''
+
 import pandas as pd
 
 def get_column_names(df : pd.DataFrame) -> list[str]:
-    '''
-    Get all column names of a pandas dataframe df
-    Returns the names as a list of string
-    '''
     return df.columns.tolist()
 
 
 def get_columns_of_type(df : pd.DataFrame, numpy_type: any) -> list[str]:
-    '''
-    Return the column names of a pandas dataframe only when 
-    the values in the column match the numpy_type
-    '''
+   
     columns = []
     for col in df.columns:
         if df[col].dtype == numpy_type:
@@ -25,29 +15,15 @@ def get_columns_of_type(df : pd.DataFrame, numpy_type: any) -> list[str]:
 
 
 def get_unique_values(df : pd.DataFrame, column_name: str) -> list:
-    '''
-    Get a list of unique values of a column in a pandas dataframe
-    '''
+
     return df[column_name].unique().tolist()
 
 def get_file_extension(file_path : str) -> str:
-    '''
-    Return the file extension of a file_path for example:
-    '/some/file/data.csv' -> 'csv'
-    '/home/important_grades.xlsx' -> 'xlsx'
-    'countries.json' -> 'json'
-
-    '''
+ 
     return file_path.split('.')[-1]
 
 def load_file(file_path: str, ext: str) -> pd.DataFrame:
-    '''
-    Load a file into a pandas dataframe assumed the file type from the extension
-    return a pandas dataframe
-    only suppose csv, excel and json file extensions
-    - when csv assume first row is header
-    - when json assume record-oriented data
-    '''
+
     if ext == 'csv':
         return pd.read_csv(file_path, header=0)
     elif ext == 'xlsx':
@@ -74,9 +50,3 @@ if __name__ == '__main__':
     print(f"Float64 Columns: {cols}")
     unique = get_unique_values(df, 'state')
     print(f"Unique States: {unique}")
-
-
-
-
-
-    # solution pandaslib.py
